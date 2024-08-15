@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package helloworld;
+
+option go_package = "github.com/felipeazsantos/pluxxe/proto";
+
+message Empty {
+
+}
+
+message HelloWorldMessage {
+    string message = 1;
+}
+
+service HelloWorldService {
+    rpc GetMessage(Empty) returns (HelloWorldMessage);
+}
