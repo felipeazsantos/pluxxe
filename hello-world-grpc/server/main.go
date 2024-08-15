@@ -15,7 +15,7 @@ type Server struct {
 	pb.HelloWorldServiceServer
 }
 
-// // GetMessage returns the Hello World message
+// GetMessage returns the Hello World message
 func (server *Server) GetMessage(ctx context.Context, in *pb.Empty) (*pb.HelloWorldMessage, error) {
 	log.Print("GetMessage was invoked")
 	return &pb.HelloWorldMessage{Message: "Hello World"}, nil
